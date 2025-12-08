@@ -3,142 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Studio Darmstadt – 3D Druck & CAD Konstruktion</title>
+    <title>3D Studio Darmstadt – Professioneller 3D Druck & CAD Konstruktion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f4f4f4;
-            color: #333;
+            font-family: "Inter", sans-serif;
+            background: #f0f2f5;
+            color: #222;
         }
-        header {
-            background: #222;
+
+        /* HERO BANNER */
+        .hero {
+            background: linear-gradient(135deg, #0057d9, #0099ff);
             color: white;
-            padding: 20px;
+            padding: 100px 20px;
             text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
-        nav {
-            background: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin: 0;
         }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
+        .hero p {
+            font-size: 20px;
+            margin-top: 15px;
+            opacity: 0.9;
         }
+
+        /* CONTENT SECTIONS */
         .section {
-            max-width: 950px;
-            margin: auto;
-            padding: 40px 20px;
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
         }
         h2 {
-            border-left: 6px solid #0077ff;
-            padding-left: 10px;
+            font-size: 28px;
+            border-left: 8px solid #007bff;
+            padding-left: 15px;
+            margin-bottom: 25px;
+            font-weight: 700;
         }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+
+        /* SERVICES GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
         }
-        .service-box {
+        .card {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            width: calc(50% - 20px);
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.25s;
         }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+
+        /* PRICES */
+        ul {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            list-style: none;
+            line-height: 1.8;
+        }
+        ul li::before {
+            content: "✓ ";
+            color: #007bff;
+            font-weight: 700;
+        }
+
+        /* CONTACT BOX */
+        .contact-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            font-size: 18px;
+        }
+        .contact-box b {
+            color: #0057d9;
+        }
+
+        /* FOOTER */
         footer {
-            background: #222;
-            color: white;
+            background: #111;
+            color: #ccc;
+            padding: 30px;
+            margin-top: 60px;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-        @media (max-width: 700px) {
-            .service-box {
-                width: 100%;
-            }
+            font-size: 14px;
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>3D Studio Darmstadt</h1>
-    <p>3D-Druck • CAD-Konstruktion • Ersatzteile • Prototyping</p>
-</header>
-
-<nav>
-    <a href="#leistungen">Leistungen</a>
-    <a href="#preise">Preise</a>
-    <a href="#galerie">Galerie</a>
-    <a href="#kontakt">Kontakt</a>
-</nav>
-
-<section class="section" id="intro">
-    <h2>Willkommen bei 3D Studio Darmstadt</h2>
-    <p>Ihr lokaler Partner für professionellen 3D Druck, präzise CAD-Konstruktionen und individuell gefertigte Ersatzteile. 
-    Ob einfache Kleinaufträge, funktionale Prototypen oder maßgefertigte Reparaturen – wir bringen Ihre Idee in die Realität.</p>
-</section>
-
-<section class="section" id="leistungen">
-    <h2>Leistungen</h2>
-    <div class="services">
-
-        <div class="service-box">
-            <h3>3D Druck Service</h3>
-            <p>FDM-Druck in PLA, PETG, TPU und weiteren Materialien. Perfekt für Prototypen, Funktionsbauteile und Ersatzteile.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>CAD Konstruktion</h3>
-            <p>Konzeption, Modellierung und technische Zeichnungen – ideal für Produkte, Vorrichtungen, Adapter & Sonderlösungen.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Ersatzteile / Reverse Engineering</h3>
-            <p>Nachbau nicht mehr erhältlicher Kunststoffteile anhand von Mustern oder Fotos.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Reparaturen</h3>
-            <p>Kleine Kunststoffreparaturen, Gehäuse, Clips, Halterungen – schnell und kostengünstig.</p>
-        </div>
+    <!-- HERO -->
+    <div class="hero">
+        <h1>3D Studio Darmstadt</h1>
+        <p>Professioneller 3D-Druck & präzise CAD-Konstruktionen für Privat & Gewerbe</p>
     </div>
-</section>
 
-<section class="section" id="preise">
-    <h2>Preise</h2>
-    <p>Alle Preise sind Richtwerte – jedes Projekt wird individuell kalkuliert.</p>
-    <ul>
-        <li><b>3D Druck:</b> ab 0,25 € pro Gramm Material</li>
-        <li><b>CAD Konstruktion:</b> 25–45 € pro Stunde</li>
-        <li><b>Ersatzteil-Nachbau:</b> ab 15 €</li>
-        <li><b>Reparaturen:</b> nach Aufwand</li>
-    </ul>
-</section>
+    <!-- ABOUT -->
+    <section class="section">
+        <h2>Über uns</h2>
+        <p>
+            Wir bieten hochwertigen 3D-Druck, maßgeschneiderte CAD-Konstruktionen, 
+            Reverse Engineering und die Fertigung individueller Ersatzteile.  
+            Lokal in Darmstadt — schnell, zuverlässig, persönlich.
+        </p>
+    </section>
 
-<section class="section" id="galerie">
-    <h2>Galerie</h2>
-    <p>Bilder deiner bisherigen Drucke oder Konstruktionen – ich kann dir fertige Vorlagen erstellen.</p>
-</section>
+    <!-- SERVICES -->
+    <section class="section">
+        <h2>Leistungen</h2>
+        <div class="grid">
 
-<section class="section" id="kontakt">
-    <h2>Kontakt</h2>
-    <p>Schreiben Sie uns eine Nachricht. Wir antworten in der Regel innerhalb von 24 Stunden.</p>
+            <div class="card">
+                <h3>3D Druck Service</h3>
+                <p>Präzise FDM-Drucke in PLA, PETG, TPU und weiteren Materialien – ideal für funktionale Teile, Prototypen & Reparaturen.</p>
+            </div>
 
-    <p><b>E-Mail:</b> kontakt@3dstudiodarmstadt.de (oder deine Wunschadresse)</p>
-    <p><b>Standort:</b> Darmstadt & Umgebung</p>
+            <div class="card">
+                <h3>CAD Konstruktion</h3>
+                <p>Konstruktionen nach Maß: technische Modelle, Nachbauten, Vorrichtungen, Adapter, Halterungen und mehr.</p>
+            </div>
 
-    <p>Oder direkt über eBay Kleinanzeigen / WhatsApp – auf Wunsch füge ich Buttons ein.</p>
-</section>
+            <div class="card">
+                <h3>Reverse Engineering</h3>
+                <p>Nachbau nicht mehr erhältlicher Teile anhand von Mustern oder Fotos – schnell und zuverlässig.</p>
+            </div>
 
-<footer>
-    © 2025 3D Studio Darmstadt – Ihr lokaler 3D-Druck- und CAD-Service
-</footer>
+            <div class="card">
+                <h3>Kunststoff Reparaturen</h3>
+                <p>Gehäuse, Clips, Halterungen und Kleinbauteile kostengünstig reparieren oder ersetzen lassen.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PRICES -->
+    <section class="section">
+        <h2>Preise</h2>
+        <ul>
+            <li><b>3D Druck:</b> ab 0,25 € pro Gramm</li>
+            <li><b>CAD Konstruktion:</b> 25–45 € / Stunde</li>
+            <li><b>Ersatzteil-Nachbau:</b> ab 15 €</li>
+            <li><b>Prototypen & Sonderteile:</b> individuell</li>
+        </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section">
+        <h2>Kontakt</h2>
+        <div class="contact-box">
+            <p><b>E-Mail:</b> kontakt@3dstudiodarmstadt.de</p>
+            <p><b>Standort:</b> Darmstadt und Umgebung</p>
+            <p>Antwortzeit: meistens unter 24 Stunden</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 3D Studio Darmstadt — Professioneller 3D Druck & CAD Service
+    </footer>
 
 </body>
 </html>
