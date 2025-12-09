@@ -34,7 +34,7 @@ body {
 /* Portfolio-Gitter */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 3-4 Bilder pro Zeile */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Bilder nebeneinander, min. 280px pro Bild */
   gap: 1.5rem;  /* Abstand zwischen den Bildern */
   margin: 2rem 0; /* Abstand nach oben und unten */
 }
@@ -72,10 +72,10 @@ body {
 /* Für die Bilder im Portfolio */
 .portfolio-item img,
 .portfolio-item video {
-  width: 100%;
-  height: auto;
+  width: 100%; 
+  height: auto;  /* Höhe wird automatisch angepasst */
   border-radius: 10px;
-  object-fit: cover;  /* Bilder/Videos füllen den Container gleichmäßig */
+  object-fit: cover;  /* Bilder füllen den Container gleichmäßig */
 }
 
 /* Für größere Projekte oder besondere Bilder */
@@ -95,7 +95,7 @@ body {
 /* Slider-Bilder */
 .portfolio-slider img {
   width: 100%;
-  height: 400px;    /* Feste Höhe für alle Bilder */
+  height: 400px;    /* Feste Höhe für alle Bilder im Slider */
   object-fit: cover; /* Passt das Bild gleichmäßig dem Container an */
   display: block;   /* Verhindert extra Abstand unter den Bildern */
 }
@@ -127,9 +127,4 @@ body {
   background-color: rgba(0, 0, 0, 0.8);  /* Intensiviert den Hintergrund bei Hover */
 }
 
-/* Für kleinere Bildschirme */
-@media (max-width: 768px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;  /* Auf kleinen Bildschirmen wird alles untereinander angezeigt */
-  }
-}
+/* Für kleinere*
