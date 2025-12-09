@@ -69,7 +69,7 @@ body {
   opacity: 1;  /* Overlay wird beim Hover sichtbar */
 }
 
-/* Für die Bilder und Videos im Portfolio */
+/* Für die Bilder im Portfolio */
 .portfolio-item img,
 .portfolio-item video {
   width: 100%;
@@ -88,25 +88,45 @@ body {
     grid-template-columns: 1fr; /* Auf kleinen Bildschirmen wird alles untereinander angezeigt */
   }
 }
-/* Über uns - Bilder nebeneinander */
-.about-images {
+
+/* Portfolio Slider */
+.portfolio-slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;  /* Maximale Breite für den Slider */
+  margin: 0 auto;    /* Zentriert den Slider */
+  overflow: hidden;  /* Verhindert, dass die Bilder außerhalb des Containers angezeigt werden */
+}
+
+.portfolio-slider img {
+  width: 100%;
+  height: auto;
+  display: block;     /* Bild nimmt die gesamte Breite ein */
+  object-fit: cover;  /* Sorgt dafür, dass das Bild gleichmäßig den Container ausfüllt */
+}
+
+/* Navigationspfeile */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
   display: flex;
-  justify-content: space-between; /* Abstand zwischen den Bildern */
-  align-items: stretch;           /* Gleiche Höhe für alle Bilder */
-  flex-wrap: wrap;                /* Zeilenumbruch, wenn es zu viele Bilder gibt */
-  gap: 1rem;                      /* Abstand zwischen den Bildern */
+  justify-content: space-between;
+  transform: translateY(-50%);
 }
 
-.about-images img {
-  height: 100%;                /* Alle Bilder bekommen die gleiche Höhe */
-  flex-grow: 1;                 /* Die Bilder wachsen und teilen sich die verfügbare Breite */
-  object-fit: cover;            /* Bilder passen sich gleichmäßig dem Container an */
-  border-radius: 10px;          /* Abgerundete Ecken für die Bilder */
-  max-width: 33%;               /* Maximalbreite: bei 3 Bildern nebeneinander */
+.slider-nav .prev,
+.slider-nav .next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  user-select: none;
 }
 
-@media (max-width: 768px) {
-  .about-images img {
-    max-width: 100%;           /* Auf kleineren Bildschirmen nehmen die Bilder 100% der Breite ein */
-  }
+.slider-nav .prev:hover,
+.slider-nav .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
