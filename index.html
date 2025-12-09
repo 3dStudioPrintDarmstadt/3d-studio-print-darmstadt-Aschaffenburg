@@ -92,60 +92,60 @@
   </div>
 </section>
 
+
+
 <!-- ================= KONTAKT ================= -->
 <section id="contact" class="section contact-section">
-  <div class="container" style="max-width: 600px; margin: auto;">
+  <div class="container" style="max-width: 600px; margin: auto; text-align: left;">
     <h2 class="section-title">Kontakt</h2>
-    
-    <!-- Formular -->
     <form id="contactForm" action="https://formspree.io/f/xyzrdlap" method="POST">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      
+      <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+
       <label for="email">E-Mail:</label>
-      <input type="email" id="email" name="email" required>
-      
+      <input type="email" id="email" name="email" placeholder="Ihre E-Mail" required>
+
+      <label for="subject">Betreff:</label>
+      <input type="text" id="subject" name="subject" placeholder="Thema Ihrer Anfrage" required>
+
       <label for="message">Nachricht:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-      
+      <textarea id="message" name="message" rows="6" placeholder="Ihre Nachricht" required></textarea>
+
       <button type="submit" class="btn">Absenden</button>
     </form>
 
-    <!-- Bestätigungsnachricht -->
-    <p id="formMessage" style="color:green; display:none; margin-top:1rem;">
-      Danke! Deine Nachricht wurde gesendet.
-    </p>
+    <!-- Bestätigungsmeldung -->
+    <div id="formSuccess" style="
+        display:none; 
+        margin-top: 1.5rem; 
+        padding: 1rem; 
+        background: #d4edda; 
+        color: #155724; 
+        border-radius: 8px; 
+        opacity: 0; 
+        transform: translateY(20px); 
+        transition: opacity 0.5s, transform 0.5s;">
+      <div style="text-align:center; margin-bottom:0.5rem;">
+        <img src="assets/img/logo.png" alt="3D Studio Darmstadt Logo" style="height:50px;">
+      </div>
+      <p>Sehr geehrte/r <span id="successName"></span>,</p>
+      <p>vielen Dank für Ihre Kontaktanfrage. Wir werden uns schnellstmöglich um Ihr Anliegen kümmern.</p>
+      <p>Ihre Anfrage zum Thema <strong><span id="successSubject"></span></strong> haben wir am <span id="successDate"></span> erhalten.</p>
+      <p>Ihre Nachricht:</p>
+      <blockquote style="margin:0; padding:0.5rem 1rem; background:#f8f9fa; border-left:4px solid #00aeef; border-radius:4px;"><span id="successMessage"></span></blockquote>
+      <p>Mit freundlichen Grüßen,<br>Ihr 3D Studio Darmstadt Team</p>
+      <p style="font-size:0.8rem; color:#555;">Diese Nachricht dient nur zu Informationszwecken. Bitte antworten Sie nicht auf diese automatische Bestätigung.</p>
+    </div>
   </div>
 </section>
 
 <script>
-const form = document.getElementById("contactForm");
-const formMessage = document.getElementById("formMessage");
+document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const subject = form.subj
 
-form.addEventListener("submit", function(event) {
-  event.preventDefault(); // verhindert Standard-Submit
-  const data = new FormData(form);
-
-  fetch(form.action, {
-    method: form.method,
-    body: data,
-    headers: {
-      'Accept': 'application/json'
-    }
-  })
-  .then(response => {
-    if (response.ok) {
-      formMessage.style.display = "block"; // zeigt Erfolgsmeldung
-      form.reset(); // Formular zurücksetzen
-    } else {
-      alert("Ups! Etwas ist schiefgelaufen. Bitte versuche es später erneut.");
-    }
-  })
-  .catch(() => {
-    alert("Ups! Etwas ist schiefgelaufen. Bitte versuche es später erneut.");
-  });
-});
-</script>
 
   
 
