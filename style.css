@@ -98,6 +98,7 @@ body {
   overflow: hidden;  /* Verhindert, dass die Bilder außerhalb des Containers angezeigt werden */
 }
 
+/* Slider-Bilder */
 .portfolio-slider img {
   width: 100%;
   height: auto;
@@ -113,27 +114,29 @@ body {
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);
+  z-index: 10; /* Stellt sicher, dass die Pfeile über den Bildern liegen */
 }
 
 .slider-nav .prev,
 .slider-nav .next {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);  /* Halbtransparentes Schwarz */
   color: white;
   padding: 10px;
   cursor: pointer;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   user-select: none;
 }
 
 .slider-nav .prev:hover,
 .slider-nav .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);  /* Intensiviert den Hintergrund bei Hover */
 }
+
 /* Portfolio-Gitter */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 3-4 Bilder pro Zeile */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 3-4 Bilder pro Zeile, je nach Breite */
   gap: 1.5rem;  /* Abstand zwischen den Bildern */
   margin: 2rem 0; /* Abstand nach oben und unten */
 }
@@ -152,13 +155,13 @@ body {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Intensivierter Schatten beim Hover */
 }
 
-.portfolio-item img,
-.portfolio-item video {
+.portfolio-item img {
   width: 100%;   /* 100% der Breite des Containers */
   height: auto;  /* Höhe automatisch anpassen */
   object-fit: cover; /* Bilder passen sich gleichmäßig dem Container an */
   border-radius: 10px;  /* Abgerundete Ecken für die Bilder */
 }
+
 
 /* Für kleinere Bildschirme */
 @media (max-width: 768px) {
