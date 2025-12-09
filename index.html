@@ -33,3 +33,92 @@
       <p>Präzise, individuell, lebendig – wir bringen Ihre Ideen in 3D zum Leben.</p>
       <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Jetzt Angebot anfragen</button>
     </div>
+  </header>
+
+  <!-- Über uns -->
+  <section id="about">
+    <h2 class="section-title">Über uns</h2>
+    <div class="about-container">
+      <div class="text">
+        <p>Wir sind ein lokales 3D-Studio mit Fokus auf 3D-Druck, CAD-Konstruktionen und Reparaturen. Mit unserer Erfahrung als Technischer Produktdesigner setzen wir Ihre Ideen präzise und zuverlässig um.</p>
+      </div>
+      <img src="studio-foto.jpg" alt="Unser Studio">
+    </div>
+  </section>
+
+  <!-- Leistungen -->
+  <section id="services">
+    <h2 class="section-title">Unsere Leistungen</h2>
+    <div class="services">
+      <div class="service">
+        <h3>3D-Druckservice</h3>
+        <p>Hochwertiger 3D-Druck für Prototypen, Ersatzteile oder individuelle Produkte.</p>
+      </div>
+      <div class="service">
+        <h3>CAD-Konstruktionen</h3>
+        <p>Professionelle CAD-Modelle nach Ihren Vorgaben oder zur Optimierung bestehender Designs.</p>
+      </div>
+      <div class="service">
+        <h3>Reparatur & Ersatzteile</h3>
+        <p>Reverse Engineering und Reparaturen von Kunststoffteilen – schnell und zuverlässig.</p>
+      </div>
+      <div class="service">
+        <h3>Fertige Designs</h3>
+        <p>Bereits fertige 3D-Designs und Modelle können Sie direkt bei uns erwerben.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <h2 class="section-title">Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="projekt1.jpg" alt="Projekt 1">
+        <div class="overlay"><p>3D-Druck Prototyp</p></div>
+      </div>
+      <div class="portfolio-item">
+        <video controls>
+          <source src="projekt2.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"><p>CAD-Modell Animation</p></div>
+      </div>
+      <div class="portfolio-item">
+        <img src="projekt3.jpg" alt="Projekt 3">
+        <div class="overlay"><p>Ersatzteil Reparatur</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="contact">
+    <h2 class="section-title">Kontakt</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Dein Name" required>
+      <input type="email" name="email" placeholder="Deine E-Mail" required>
+      <textarea name="message" rows="6" placeholder="Deine Nachricht" required></textarea>
+      <button type="submit">Nachricht senden</button>
+    </form>
+  </section>
+
+  <!-- Impressum -->
+  <section id="impressum">
+    <h2 class="section-title">Impressum</h2>
+    <p>
+      3D Studio Darmstadt & Aschaffenburg<br>
+      Inhaber: Max Mustermann<br>
+      Musterstraße 12<br>
+      64283 Darmstadt / 63739 Aschaffenburg<br>
+      E-Mail: info@3dstudiodarmstadt.de<br>
+      Telefon: 06151 1234567<br>
+      Verantwortlich für Inhalte: Max Mustermann
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 3D Studio Darmstadt & Aschaffenburg | Alle Rechte vorbehalten
+  </footer>
+
+</body>
+</html>
