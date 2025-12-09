@@ -8,91 +8,97 @@
 </head>
 <body>
 
-  <!-- ================= NAVIGATION ================= -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo">3D Studio Darmstadt</div>
-      <ul class="nav-links">
-        <li><a href="#about">Über uns</a></li>
-        <li><a href="#leistungen">Leistungen</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-        <li><a href="#impressum">Impressum</a></li>
-      </ul>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline id="heroVid"></video>
+  <div class="hero-content">
+    <h1>Präziser 3D-Druck aus Darmstadt</h1>
+    <p>Prototyping • Ersatzteile • CAD-Konstruktion</p>
+    <a href="#contact" class="btn">Jetzt Angebot anfragen</a>
+  </div>
+</section>
+
+<!-- ================= NAVIGATION ================= -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">3D Studio Darmstadt</div>
+    <ul class="nav-links">
+      <li><a href="#about">Über uns</a></li>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+      <li><a href="#impressum">Impressum</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= ÜBER UNS ================= -->
+<section id="about" class="section">
+  <div class="container" style="max-width: 900px; margin: auto;">
+    <h2 class="section-title">Über uns</h2>
+    <p>Wir sind ein lokales 3D-Studio mit Fokus auf 3D-Druck, CAD-Konstruktion und Ersatzteilfertigung. 
+       Mit modernster Technologie und präziser Handarbeit bringen wir Ihre Ideen in die Realität.</p>
+
+    <div class="about-images">
+      <img src="assets/img/studio/studio_1.jpg" alt="Studio Bild 1">
+      <img src="assets/img/studio/studio_2.jpg" alt="Studio Bild 2">
+      <img src="assets/img/studio/studio_3.jpg" alt="Studio Bild 3">
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline id="heroVid"></video>
-    <div class="hero-content">
-      <h1>Präziser 3D-Druck aus Darmstadt</h1>
-      <p>Prototyping • Ersatzteile • CAD-Konstruktion</p>
-      <a href="#contact" class="btn">Jetzt Angebot anfragen</a>
+<!-- ================= LEISTUNGEN ================= -->
+<section id="leistungen" class="section" style="background: #f7f7f7;">
+  <div class="container" style="max-width: 800px; margin: auto;">
+    <h2 class="section-title">Leistungen</h2>
+    <ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 1.8;">
+      <li>3D-Druck (FDM – PLA, PETG, TPU)</li>
+      <li>CAD-Konstruktion & Reverse Engineering</li>
+      <li>Ersatzteile und funktionale Bauteile</li>
+      <li>Prototypenentwicklung</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= PORTFOLIO ================= -->
+<section id="portfolio" class="section">
+  <div class="container">
+    <h2 class="section-title">Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item"><img src="assets/img/portfolio/projekt1.jpg" alt="Projekt 1"></div>
+      <div class="portfolio-item"><img src="assets/img/portfolio/projekt2.jpg" alt="Projekt 2"></div>
+      <div class="portfolio-item"><img src="assets/img/portfolio/projekt3.jpg" alt="Projekt 3"></div>
+      <div class="portfolio-item"><img src="assets/img/portfolio/projekt4.jpg" alt="Projekt 4"></div>
+      <div class="portfolio-item"><img src="assets/img/portfolio/projekt5.jpg" alt="Projekt 5"></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ================= ÜBER UNS ================= -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">Über uns</h2>
-      <p>Wir sind ein lokales 3D-Studio mit Schwerpunkt auf 3D-Druck, CAD-Konstruktion und Ersatzteilfertigung.
-         Als Technischer Produktdesigner bringen wir Ihre Ideen präzise in Form.</p>
+<!-- ================= KONTAKT ================= -->
+<section id="contact" class="section contact-section">
+  <div class="container" style="max-width: 600px; margin: auto; text-align: left;">
+    <h2 class="section-title">Kontakt</h2>
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin-bottom: 1rem;"><br>
+      <label for="email">E-Mail:</label><br>
+      <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 1rem;"><br>
+      <label for="message">Nachricht:</label><br>
+      <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px; margin-bottom: 1rem;"></textarea><br>
+      <button type="submit" class="btn">Absenden</button>
+    </form>
+  </div>
+</section>
 
-      <div class="about-images">
-        <img src="assets/img/studio/studio_1.jpg" alt="">
-        <img src="assets/img/studio/studio_2.jpg" alt="">
-        <img src="assets/img/studio/studio_3.jpg" alt="">
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= LEISTUNGEN ================= -->
-  <section id="leistungen" class="section">
-    <div class="container">
-      <h2 class="section-title">Leistungen</h2>
-      <ul>
-        <li>3D-Druck (FDM – PLA, PETG, TPU)</li>
-        <li>CAD-Konstruktion & Reverse Engineering</li>
-        <li>Ersatzteile und funktionale Bauteile</li>
-        <li>Prototypenentwicklung</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ================= PORTFOLIO ================= -->
-  <section id="portfolio" class="section">
-    <div class="container">
-      <h2 class="section-title">Portfolio</h2>
-      <div class="portfolio-grid">
-        <div class="portfolio-item"><img src="assets/img/portfolio/projekt1.jpg" alt=""></div>
-        <div class="portfolio-item"><img src="assets/img/portfolio/projekt2.jpg" alt=""></div>
-        <div class="portfolio-item"><img src="assets/img/portfolio/projekt3.jpg" alt=""></div>
-        <div class="portfolio-item"><img src="assets/img/portfolio/projekt4.jpg" alt=""></div>
-        <div class="portfolio-item"><img src="assets/img/portfolio/projekt5.jpg" alt=""></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= KONTAKT ================= -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Kontakt</h2>
-      <form>
-        <!-- Formularfelder hier -->
-      </form>
-    </div>
-  </section>
-
-  <!-- ================= IMPRESSUM ================= -->
-  <section id="impressum" class="section">
-    <div class="container">
-      <h2 class="section-title">Impressum</h2>
-      <p>Rechtliche Angaben, Name, Adresse, etc.</p>
-    </div>
-  </section>
-
-  <!-- ================= SCRIPTS ================= -->
-  <script src="assets/js/heroSlider.js"></script>
-</body>
-</html>
+<!-- ================= IMPRESSUM ================= -->
+<section id="impressum" class="section impressum-section" style="background: #f7f7f7;">
+  <div class="container" style="max-width: 700px; margin: auto;">
+    <h2 class="section-title">Impressum</h2>
+    <p>3D Studio Darmstadt<br>
+       Musterstraße 12<br>
+       64285 Darmstadt<br>
+       Deutschland<br>
+       Telefon: 06151 123456<br>
+       E-Mail: info@3dstudio-darmstadt.de<br>
+       Geschäftsführer: Max Mustermann</p>
+    <p>Umsatzsteuer-ID: DE123456789<br>
