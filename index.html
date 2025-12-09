@@ -1,125 +1,80 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Studio Print & Design Darmstadt / Aschaffenburg</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Studio Darmstadt – CAD & 3D-Druck Service</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
 
-<!-- Navigation -->
+<!-- ===================== NAVIGATION ===================== -->
 <nav class="navbar">
-  <div class="nav-container">
-    <img src="assets/img/logo.svg" alt="3D Studio Logo" class="logo">
-
-    <ul class="nav-links">
-      <li><a href="#about">Über uns</a></li>
-      <li><a href="#services">Leistungen</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Kontakt</a></li>
-      <li><a href="#impressum">Impressum</a></li>
-    </ul>
-  </div>
+    <div class="nav-container">
+        <div class="logo">3D Studio Darmstadt</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#studio">Studio</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </div>
 </nav>
 
+<!-- ===================== HERO ===================== -->
+<section id="hero" class="hero">
 
-<!-- Hero -->
-<header class="hero">
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="assets/img/hero/hero1.mp4" type="video/mp4">
-  </video>
+    <!-- Video -->
+    <video autoplay muted loop playsinline id="heroVideo" class="hero-video">
+        <source src="assets/video/hero/hero.mp4" type="video/mp4" />
+    </video>
 
-  <div class="hero-content">
-    <h1>Ihr 3D-Druck & CAD-Service in Darmstadt & Aschaffenburg</h1>
-    <p>Präzise, individuell, effizient – wir bringen Ihre Ideen professionell in 3D zum Leben.</p>
-
-    <button class="btn"
-      onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-      Jetzt Angebot anfragen
-    </button>
-  </div>
-</header>
-
-
-<!-- Über uns -->
-<section id="about" class="section">
-  <h2 class="section-title">Über uns</h2>
-
-  <div class="container about-container">
-
-    <div class="about-text">
-      <p>
-        Wir sind ein lokales 3D-Studio mit Schwerpunkt auf 3D-Druck, CAD-Konstruktion und Ersatzteilfertigung.
-        Als Technischer Produktdesigner bringen wir Ihre Ideen präzise in Form.
-      </p>
+    <!-- Content -->
+    <div class="hero-content">
+        <h1>3D Studio Darmstadt</h1>
+        <p>CAD · 3D Druck · Prototypen · Reverse Engineering</p>
+        <a href="#kontakt" class="btn">Jetzt anfragen</a>
     </div>
 
-    <!-- Studio Grid -->
-    <div class="about-images">
-      <img src="assets/img/studio/studio_1.jpg" alt="">
-      <img src="assets/img/studio/studio_2.jpg" alt="">
-      <img src="assets/img/studio/studio_3.jpg" alt="">
+    <!-- Slider Controls -->
+    <div class="hero-slider-controls">
+        <span id="heroPrev" class="hero-btn">‹</span>
+        <span id="heroNext" class="hero-btn">›</span>
     </div>
 
-  </div>
 </section>
 
 
-<!-- Portfolio -->
+<!-- ===================== STUDIO (1 Reihe, gleiche Höhe) ===================== -->
+<section id="studio" class="section">
+    <h2 class="section-title">Unser Studio</h2>
+
+    <div class="studio-row">
+        <img src="assets/img/studio/studio_1.jpg" />
+        <img src="assets/img/studio/studio_2.jpg" />
+        <img src="assets/img/studio/studio_3.jpg" />
+    </div>
+</section>
+
+
+<!-- ===================== PORTFOLIO (GRID) ===================== -->
 <section id="portfolio" class="section">
-  <h2 class="section-title">Portfolio</h2>
+    <h2 class="section-title">Portfolio</h2>
 
-  <div class="container portfolio-grid">
-
-    <div class="portfolio-item">
-      <img src="assets/img/portfolio/projekt1.webp" alt="">
+    <div class="portfolio-grid">
+        <img src="assets/img/portfolio/projekt1.jpg" />
+        <img src="assets/img/portfolio/projekt2.jpg" />
+        <img src="assets/img/portfolio/projekt3.jpg" />
+        <img src="assets/img/portfolio/projekt4.jpg" />
+        <img src="assets/img/portfolio/projekt5.jpg" />
     </div>
-
-    <div class="portfolio-item">
-      <img src="assets/img/portfolio/projekt2.webp" alt="">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="assets/img/portfolio/projekt3.webp" alt="">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="assets/img/portfolio/projekt4.webp" alt="">
-    </div>
-
-    <div class="portfolio-item">
-      <img src="assets/img/portfolio/projekt5.webp" alt="">
-    </div>
-
-  </div>
 </section>
 
 
-<!-- Portfolio-Slider für Hero-Alternativen -->
+<!-- ===================== IMAGE SLIDER ===================== -->
 <section class="section">
-  <h2 class="section-title">Hero-Slider Vorschau</h2>
+    <h2 class="section-title">Details</h2>
 
-  <div class="portfolio-slider">
-    <img src="assets/img/portfolio/projekt1.webp">
-    <img src="assets/img/portfolio/projekt2.webp">
-    <img src="assets/img/portfolio/projekt3.webp">
-
-    <div class="slider-nav">
-      <span class="prev">&#10094;</span>
-      <span class="next">&#10095;</span>
-    </div>
-  </div>
-</section>
-
-
-<script src="assets/js/slider.js"></script>
-
-</body>
-</html>
+    <div class="portfolio-slider">
+        <img class="slide" src="assets/img/portfolio/projekt1.jpg" />
+        <img class="slide" src="assets/img/portfolio/projekt2.jpg"
