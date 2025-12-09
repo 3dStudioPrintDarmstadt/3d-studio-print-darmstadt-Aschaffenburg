@@ -1,6 +1,3 @@
-// ================= HERO VIDEO SLIDER =================
-
-// Liste aller Hero-Videos
 const heroVideos = [
     "assets/video/hero/hero.mp4",
     "assets/video/hero/hero1.mp4",
@@ -8,39 +5,29 @@ const heroVideos = [
 ];
 
 let heroIndex = 0;
-const heroVideo = document.getElementById("heroVid"); // ID wie im HTML
+const heroVideo = document.querySelector(".hero-video");
 
-// Funktion zum Abspielen des aktuellen Videos
 function playCurrentVideo() {
-    if(!heroVideo) return;
+    if (!heroVideo) return;
     heroVideo.src = heroVideos[heroIndex];
-    heroVideo.play().catch(() => {
-        console.warn("Video konnte nicht abgespielt werden:", heroVideos[heroIndex]);
-    });
+    heroVideo.load();
+    heroVideo.play().catch(err => console.warn("Video konnte nicht abgespielt werden:", err));
 }
 
-// Automatisch zum nächsten Video wechseln, wenn Ende erreicht
-heroVideo.addEventListener("ended", () => {
+heroVideo?.addEventListener("ended", () => {
     heroIndex = (heroIndex + 1) % heroVideos.length;
     playCurrentVideo();
 });
 
-// Buttonsteuerung (falls vorhanden)
-const nextBtn = document.getElementById("heroNext");
-const prevBtn = document.getElementById("heroPrev");
-
-if(nextBtn) {
-    nextBtn.onclick = () => {
-        heroIndex = (heroIndex + 1) % heroVideos.length;
+// Buttons per data-attribute
+document.querySelectorAll(".hero-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const dir = btn.getAttribute("data-direction");
+        if (dir === "next") heroIndex = (heroIndex + 1) % heroVideos.length;
+        if (dir === "prev") heroIndex = (heroIndex - 1 + heroVideos.length) % heroVideos.length;
         playCurrentVideo();
-    };
-}
-if(prevBtn) {
-    prevBtn.onclick = () => {
-        heroIndex = (heroIndex - 1 + heroVideos.length) % heroVideos.length;
-        playCurrentVideo();
-    };
-}
+    });
+});
 
-// Starte das erste Video
+// Erstes Video starten
 playCurrentVideo();
