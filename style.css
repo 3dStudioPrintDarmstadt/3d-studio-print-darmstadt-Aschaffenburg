@@ -31,6 +31,22 @@ body {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+/* Über uns - Studio Grid */
+.about-images {
+  display: grid; /* Wir verwenden Grid, um die Bilder nebeneinander anzuordnen */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  /* Mindestens 280px pro Bild, die restliche Breite wird verteilt */
+  gap: 1.5rem; /* Abstand zwischen den Bildern */
+  width: 100%;  /* Der Container nutzt die gesamte Breite des Containers oder der Seite */
+}
+
+/* Jedes Bild im Studio-Grid */
+.about-images img {
+  width: 100%;  /* Breite des Bildes passt sich der jeweiligen Grid-Spalte an */
+  height: 300px; /* Feste Höhe für alle Bilder */
+  object-fit: cover;  /* Das Bild wird so zugeschnitten, dass es den Container ausfüllt */
+  border-radius: 10px;  /* Abgerundete Ecken für die Bilder */
+}
+
 /* Portfolio-Gitter */
 .portfolio-grid {
   display: grid;
