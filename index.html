@@ -3,151 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Studio Print&Design Darmstadt/Aschaffenburg</title>
+  <title>3D Studio Print & Design Darmstadt / Aschaffenburg</title>
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="logo">
-      <img src="logo.svg" alt="3D Studio Print&Design Darmstadt/Aschaffenburg" height="50">
-    </div>
-    <ul>
-      <li><a href="#about">Über uns</a></li>
-      <li><a href="#services">Leistungen</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Kontakt</a></li>
-      <li><a href="#impressum">Impressum</a></li>
-    </ul>
-  </nav>
+<!-- Navigation -->
+<nav>
+  <div class="logo">
+    <img src="logo.svg" alt="3D Studio Logo" height="50">
+  </div>
+  <ul>
+    <li><a href="#about">Über uns</a></li>
+    <li><a href="#services">Leistungen</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Kontakt</a></li>
+    <li><a href="#impressum">Impressum</a></li>
+  </ul>
+</nav>
 
-  <!-- Hero -->
-  <header>
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="hero.mp4" type="video/mp4">
-    </video>
-    <div class="hero-content">
-      <h1>Ihr 3D-Druck & CAD-Service in Darmstadt & Aschaffenburg</h1>
-      <p>Präzise, individuell, lebendig – wir bringen Ihre Produkte und Ideen in 3D zum Leben.</p>
-      <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Jetzt Angebot anfragen</button>
-    </div>
-  </header>
 
-  <!-- Über uns -->
+<!-- Hero-Bereich -->
+<header>
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="hero.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-content">
+    <h1>Ihr 3D-Druck & CAD-Service in Darmstadt & Aschaffenburg</h1>
+    <p>Präzise, individuell, effizient – wir bringen Ihre Ideen professionell in 3D zum Leben.</p>
+
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Jetzt Angebot anfragen
+    </button>
+  </div>
+</header>
+
+
+<!-- Über uns -->
 <section id="about">
   <h2 class="section-title">Über uns</h2>
+
   <div class="about-container">
     <div class="text">
-      <p>Wir sind ein lokales 3D-Studio mit Fokus auf 3D-Druck, CAD-Konstruktionen und Reparaturen. Mit unserer Erfahrung als Technischer Produktdesigner setzen wir Ihre Ideen präzise und zuverlässig um.</p>
+      <p>
+        Wir sind ein lokales 3D-Studio mit Schwerpunkt auf 3D-Druck, CAD-Konstruktion sowie Ersatzteilfertigung.
+        Mit Erfahrung als Technischer Produktdesigner setzen wir Ihre Projekte präzise und zuverlässig um.
+      </p>
     </div>
-    <div class="about-images">
-      <img src="studio_1.jpg" alt="Unser Studio">
-      <img src="studio_2.jpg" alt="Unser Studio">
-      <img src="studio_3.jpg" alt="Unser Studio">
-    </div>
-  </div>
-</section>
-
-
-  <!-- Leistungen -->
-  <section id="services">
-    <h2 class="section-title">Unsere Leistungen</h2>
-    <div class="services">
-      <div class="service">
-        <h3>3D-Druckservice</h3>
-        <p>Hochwertiger 3D-Druck für Prototypen, Ersatzteile oder individuelle Produkte.</p>
-      </div>
-      <div class="service">
-        <h3>CAD-Konstruktionen</h3>
-        <p>Professionelle CAD-Modelle nach Ihren Vorgaben oder zur Optimierung bestehender Designs.</p>
-      </div>
-      <div class="service">
-        <h3>Reparatur & Ersatzteile</h3>
-        <p>Reverse Engineering und Reparaturen von Kunststoffteilen – schnell und zuverlässig.</p>
-      </div>
-      <div class="service">
-        <h3>Fertige Designs</h3>
-        <p>Bereits fertige 3D-Designs und Modelle können Sie direkt bei uns erwerben.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio Gitteransicht (Mehrere Bilder nebeneinander) -->
-  <section id="portfolio">
-    <h2 class="section-title">Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="projekt1.jpg" alt="Projekt 1">
-        <div class="overlay"><p>3D-Druck Prototyp</p></div>
-      </div>
-      <div class="portfolio-item">
-        <img src="projekt2.jpg" alt="Projekt 2">
-        <div class="overlay"><p>3D-Druck Prototyp</p></div>
-      </div>
-      <div class="portfolio-item">
-        <img src="projekt3.jpg" alt="Projekt 3">
-        <div class="overlay"><p>Ersatzteil Reparatur</p></div>
-      </div>
-      <div class="portfolio-item">
-        <img src="projekt4.jpg" alt="Projekt 4">
-        <div class="overlay"><p>3D-Druck Prototyp</p></div>
-      </div>
-    </div>
-  </section>
-
- <!-- Portfolio Slider -->
-<section id="portfolio">
-  <h2 class="section-title">Portfolio</h2>
-  <div class="portfolio-slider">
-    <!-- Erste Projekt-Bilder -->
-    <img src="projekt1.jpg" alt="Projekt 1">
-    <img src="projekt2.jpg" alt="Projekt 2" style="display:none;">
-    <img src="projekt3.jpg" alt="Projekt 3" style="display:none;">
-    <img src="projekt4.jpg" alt="Projekt 4" style="display:none;">
-    
-    <!-- Navigationspfeile -->
-    <div class="slider-nav">
-      <span class="prev">&#10094;</span>
-      <span class="next">&#10095;</span>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Kontakt -->
-  <section id="contact">
-    <h2 class="section-title">Kontakt</h2>
-    <form action="#" method="post">
-      <input type="text" name="name" placeholder="Dein Name" required>
-      <input type="email" name="email" placeholder="Deine E-Mail" required>
-      <textarea name="message" rows="6" placeholder="Deine Nachricht" required></textarea>
-      <button type="submit">Nachricht senden</button>
-    </form>
-  </section>
-
-  <!-- Impressum -->
-  <section id="impressum">
-    <h2 class="section-title">Impressum</h2>
-    <p>
-      3D Studio Print&Design Darmstadt/Aschaffenburg<br>
-      Inhaber: Max Mustermann<br>
-      Noackstraße 48<br>
-      644285 Darmstadt / 63743 Aschaffenburg<br>
-      E-Mail: 3dstudiodarmstadt@gmail.com<br>
-      Telefon: (auf Nachfrage)<br>
-      Verantwortlich für Inhalte: Johannes Keller
-    </p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 3D Studio Print&Design Darmstadt/Aschaffenburg | Alle Rechte vorbehalten
-  </footer>
-
-  <!-- JavaScript einfügen -->
-  <script src="slider.js"></script>
-
-</body>
-</html>
