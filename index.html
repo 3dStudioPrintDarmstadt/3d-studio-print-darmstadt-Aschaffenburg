@@ -204,6 +204,27 @@
     </div>
   </div>
 </section>
+
+<!-- ================= KONTAKT ================= -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <h2 class="section-title">Kontakt</h2>
+    <p>Schreiben Sie uns Ihr Projekt – wir melden uns schnellstmöglich zurück.</p>
+
+    <form id="contactForm" action="YOUR_FORM_HANDLER_URL" method="POST">
+      <input type="text" name="name" placeholder="Ihr Name" required>
+      <input type="email" name="email" placeholder="Ihre E-Mail" required>
+      <input type="text" name="subject" placeholder="Betreff" required>
+      <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+      <button type="submit" class="btn">Nachricht senden</button>
+    </form>
+
+    <div id="formSuccess" style="display:none; background:#d4edda; color:#155724; padding:1rem; margin-top:1rem; border-radius:8px;">
+      <p>Danke, <span id="successName"></span>! Ihre Nachricht "<span id="successMessage"></span>" zum Thema "<span id="successSubject"></span>" wurde am <span id="successDate"></span> gesendet.</p>
+    </div>
+  </div>
+</section>
+ 
 <!-- ================= IMPRESSUM ================= -->
 <section id="impressum" class="section impressum-section bg-light">
   <div class="container">
