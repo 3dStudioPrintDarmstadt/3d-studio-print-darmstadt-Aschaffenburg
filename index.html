@@ -12,9 +12,9 @@
 <section class="hero">
   <video class="hero-video" autoplay muted loop playsinline preload="metadata"></video>
   <div class="hero-content">
-    <h1>Präziser 3D-Druck aus Darmstadt</h1>
-    <p>Prototyping • Ersatzteile • CAD-Konstruktion</p>
-    <a href="#contact" class="btn">Jetzt Angebot anfragen</a>
+    <h1>Präziser 3D-Druck & CAD aus Darmstadt</h1>
+    <p>Prototypen, Ersatzteile & innovative Konstruktionen – schnell, zuverlässig, individuell</p>
+    <a href="#contact" class="btn">Jetzt Projekt starten</a>
     <div class="hero-controls">
       <button class="hero-btn" data-direction="prev" aria-label="Vorheriges Video">←</button>
       <button class="hero-btn" data-direction="next" aria-label="Nächstes Video">→</button>
@@ -40,8 +40,8 @@
 <section id="about" class="section">
   <div class="container">
     <h2 class="section-title">Über uns</h2>
-    <p>Wir sind ein lokales 3D-Studio mit Fokus auf 3D-Druck, CAD-Konstruktion und Ersatzteilfertigung. 
-       Mit modernster Technologie und präziser Handarbeit bringen wir Ihre Ideen in die Realität.</p>
+    <p>Wir sind Ihr lokales 3D-Studio in Darmstadt. Mit modernster Technik und präziser Handarbeit realisieren wir Ideen – von Prototypen bis zu funktionalen Bauteilen. Unser Ziel: Ihre Projekte effizient, kreativ und zuverlässig umzusetzen.</p>
+    <p>Hinter 3D Studio Darmstadt steht ein engagiertes Team aus erfahrenen Konstrukteuren und 3D-Druck-Experten.</p>
     <div class="about-images">
       <img src="assets/img/studio/studio_1.jpg" alt="Studio Bild 1">
       <img src="assets/img/studio/studio_2.jpg" alt="Studio Bild 2">
@@ -53,12 +53,12 @@
 <!-- ================= LEISTUNGEN ================= -->
 <section id="leistungen" class="section bg-light">
   <div class="container">
-    <h2 class="section-title">Leistungen</h2>
+    <h2 class="section-title">Unsere Leistungen</h2>
     <ul class="leistungs-list">
-      <li>3D-Druck (FDM – PLA, PETG, TPU)</li>
-      <li>CAD-Konstruktion & Reverse Engineering</li>
-      <li>Ersatzteile und funktionale Bauteile</li>
-      <li>Prototypenentwicklung</li>
+      <li><strong>3D-Druck:</strong> Von PLA bis TPU – wir fertigen Prototypen und funktionale Teile in höchster Präzision.</li>
+      <li><strong>CAD-Konstruktion & Reverse Engineering:</strong> Präzise 3D-Modelle für individuelle Bauteile oder komplexe Konstruktionen.</li>
+      <li><strong>Ersatzteile & funktionale Bauteile:</strong> Passgenaue Lösungen für jedes Projekt – zuverlässig und robust.</li>
+      <li><strong>Prototypenentwicklung:</strong> Ideen testen, optimieren, realisieren – schnell und effizient.</li>
     </ul>
   </div>
 </section>
@@ -66,7 +66,8 @@
 <!-- ================= PORTFOLIO ================= -->
 <section id="portfolio" class="section">
   <div class="container">
-    <h2 class="section-title">Portfolio</h2>
+    <h2 class="section-title">Unsere Projekte</h2>
+    <p>Ein Auszug aus unseren realisierten Projekten – von funktionalen Bauteilen bis zu kreativen Prototypen.</p>
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <img src="assets/img/portfolio/projekt1.jpg" alt="Projekt 1">
@@ -92,12 +93,11 @@
   </div>
 </section>
 
-
-
 <!-- ================= KONTAKT ================= -->
 <section id="contact" class="section contact-section">
-  <div class="container" style="max-width: 600px; margin: auto; text-align: left;">
-    <h2 class="section-title">Kontakt</h2>
+  <div class="container">
+    <h2 class="section-title">Kontaktieren Sie uns</h2>
+    <p>Haben Sie ein Projekt oder eine Frage? Schreiben Sie uns – wir melden uns schnellstmöglich.</p>
     <form id="contactForm" action="https://formspree.io/f/xyzrdlap" method="POST">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" placeholder="Ihr Name" required>
@@ -115,16 +115,7 @@
     </form>
 
     <!-- Bestätigungsmeldung -->
-    <div id="formSuccess" style="
-        display:none; 
-        margin-top: 1.5rem; 
-        padding: 1rem; 
-        background: #d4edda; 
-        color: #155724; 
-        border-radius: 8px; 
-        opacity: 0; 
-        transform: translateY(20px); 
-        transition: opacity 0.5s, transform 0.5s;">
+    <div id="formSuccess" style="display:none; margin-top: 1.5rem; padding: 1rem; background: #d4edda; color: #155724; border-radius: 8px; opacity: 0; transition: opacity 0.5s;">
       <div style="text-align:center; margin-bottom:0.5rem;">
         <img src="assets/img/logo.png" alt="3D Studio Darmstadt Logo" style="height:50px;">
       </div>
@@ -138,16 +129,6 @@
     </div>
   </div>
 </section>
-
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const form = e.target;
-    const name = form.name.value;
-    const subject = form.subj
-
-
-  
 
 <!-- ================= IMPRESSUM ================= -->
 <section id="impressum" class="section impressum-section bg-light">
@@ -166,5 +147,42 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
 
 <script src="assets/js/heroSlider.js"></script>
 <script src="assets/js/imageSlider.js"></script>
+
+<script>
+// ================= Kontaktformular =================
+document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const subject = form.subject.value;
+    const message = form.message.value;
+    const today = new Date().toLocaleDateString('de-DE');
+
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if(response.ok){
+            form.reset();
+            // Inhalte in Bestätigung einfügen
+            document.getElementById('successName').textContent = name;
+            document.getElementById('successSubject').textContent = subject;
+            document.getElementById('successMessage').textContent = message;
+            document.getElementById('successDate').textContent = today;
+
+            const successMsg = document.getElementById('formSuccess');
+            successMsg.style.display = 'block';
+            setTimeout(()=>{ successMsg.style.opacity = 1; }, 50);
+            setTimeout(()=>{ successMsg.style.opacity = 0; setTimeout(()=>{ successMsg.style.display='none'; }, 500); }, 7000);
+        } else {
+            alert('Ups! Beim Senden der Nachricht ist ein Fehler aufgetreten.');
+        }
+    }).catch(() => {
+        alert('Ups! Beim Senden der Nachricht ist ein Fehler aufgetreten.');
+    });
+});
+</script>
+
 </body>
 </html>
