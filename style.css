@@ -56,11 +56,13 @@ body {
 /* Portfolio-Gitter */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Bilder nebeneinander, min. 280px pro Bild */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Maximal 4 Bilder pro Zeile (bei genug Platz) */
   gap: 1.5rem;  /* Abstand zwischen den Bildern */
   margin: 2rem 0; /* Abstand nach oben und unten */
+  width: 100%; /* Der Container nutzt die gesamte Breite */
 }
 
+/* Portfolio-Item */
 .portfolio-item {
   position: relative;
   overflow: hidden;
@@ -91,19 +93,27 @@ body {
   opacity: 1;  /* Overlay wird beim Hover sichtbar */
 }
 
-/* Für die Bilder im Portfolio */
+/* Bilder im Portfolio */
 .portfolio-item img,
 .portfolio-item video {
-  width: 100%; 
-  height: auto;  /* Höhe wird automatisch angepasst */
-  border-radius: 10px;
-  object-fit: cover;  /* Bilder füllen den Container gleichmäßig */
+  width: 100%;
+  height: 100%; /* Höhe wird auf 100% der Containerhöhe gesetzt */
+  object-fit: cover;  /* Passt das Bild gleichmäßig dem Container an */
+  border-radius: 10px; /* Abgerundete Ecken für die Bilder */
 }
 
 /* Für größere Projekte oder besondere Bilder */
 .portfolio-item.large {
   grid-column: span 2;  /* Diese Projekte nehmen 2 Spalten ein */
 }
+
+/* Für kleine Bildschirme */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;  /* Auf kleinen Bildschirmen wird alles untereinander angezeigt */
+  }
+}
+
 
 /* Portfolio Slider */
 .portfolio-slider {
