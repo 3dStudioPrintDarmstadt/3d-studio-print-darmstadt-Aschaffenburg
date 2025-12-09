@@ -88,3 +88,25 @@ body {
     grid-template-columns: 1fr; /* Auf kleinen Bildschirmen wird alles untereinander angezeigt */
   }
 }
+/* Über uns - Bilder nebeneinander */
+.about-images {
+  display: flex;
+  justify-content: space-between; /* Abstand zwischen den Bildern */
+  align-items: stretch;           /* Gleiche Höhe für alle Bilder */
+  flex-wrap: wrap;                /* Zeilenumbruch, wenn es zu viele Bilder gibt */
+  gap: 1rem;                      /* Abstand zwischen den Bildern */
+}
+
+.about-images img {
+  height: 100%;                /* Alle Bilder bekommen die gleiche Höhe */
+  flex-grow: 1;                 /* Die Bilder wachsen und teilen sich die verfügbare Breite */
+  object-fit: cover;            /* Bilder passen sich gleichmäßig dem Container an */
+  border-radius: 10px;          /* Abgerundete Ecken für die Bilder */
+  max-width: 33%;               /* Maximalbreite: bei 3 Bildern nebeneinander */
+}
+
+@media (max-width: 768px) {
+  .about-images img {
+    max-width: 100%;           /* Auf kleineren Bildschirmen nehmen die Bilder 100% der Breite ein */
+  }
+}
