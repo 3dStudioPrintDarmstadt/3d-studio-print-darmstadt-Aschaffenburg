@@ -1,3 +1,5 @@
+/* ------------------ GLOBAL ------------------ */
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
@@ -6,7 +8,8 @@ body {
   padding: 0;
 }
 
-/* Hero-Sektion */
+/* ------------------ HERO VIDEO ------------------ */
+
 .hero-video {
   position: absolute;
   top: 0;
@@ -31,50 +34,59 @@ body {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+/* ------------------ STUDIO GRID (Über uns) ------------------ */
+
+.about-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.about-images img {
+  width: 100%;
+  height: 300px;        /* Einheitliche Höhe */
+  object-fit: cover;    /* Bild wird zugeschnitten und skaliert */
+  border-radius: 10px;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .about-images {
-    grid-template-columns: 1fr;  /* Auf kleinen Bildschirmen wird jedes Bild in einer eigenen Zeile angezeigt */
+    grid-template-columns: 1fr;
   }
 }
 
-/* Über uns - Studio Grid */
-.about-images {
-  display: grid; /* Wir verwenden Grid, um die Bilder nebeneinander anzuordnen */
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  /* Mindestens 280px pro Bild, die restliche Breite wird verteilt */
-  gap: 1.5rem; /* Abstand zwischen den Bildern */
-  width: 100%;  /* Der Container nutzt die gesamte Breite des Containers oder der Seite */
-}
+/* ------------------ PORTFOLIO GRID ------------------ */
 
-/* Jedes Bild im Studio-Grid */
-.about-images img {
-  width: 100%;  /* Breite des Bildes passt sich der jeweiligen Grid-Spalte an */
-  height: 300px; /* Feste Höhe für alle Bilder */
-  object-fit: cover;  /* Das Bild wird so zugeschnitten, dass es den Container ausfüllt */
-  border-radius: 10px;  /* Abgerundete Ecken für die Bilder */
-}
-
-/* Portfolio-Gitter */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Maximal 4 Bilder pro Zeile (bei genug Platz) */
-  gap: 1.5rem;  /* Abstand zwischen den Bildern */
-  margin: 2rem 0; /* Abstand nach oben und unten */
-  width: 100%; /* Der Container nutzt die gesamte Breite */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  
+  gap: 1.5rem;
+  margin: 2rem 0;
+  width: 100%;
 }
 
-/* Portfolio-Item */
 .portfolio-item {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* leichter Schatten für mehr Tiefe */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-item:hover {
-  transform: scale(1.05);  /* Vergrößern bei Hover */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Intensivierter Schatten beim Hover */
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img,
+.portfolio-item video {
+  width: 100%;
+  height: 300px;     /* Einheitliche Höhe für alle Portfolio-Bilder */
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .portfolio-item .overlay {
@@ -90,49 +102,40 @@ body {
 }
 
 .portfolio-item:hover .overlay {
-  opacity: 1;  /* Overlay wird beim Hover sichtbar */
+  opacity: 1;
 }
 
-/* Bilder im Portfolio */
-.portfolio-item img,
-.portfolio-item video {
-  width: 100%;
-  height: 100%; /* Höhe wird auf 100% der Containerhöhe gesetzt */
-  object-fit: cover;  /* Passt das Bild gleichmäßig dem Container an */
-  border-radius: 10px; /* Abgerundete Ecken für die Bilder */
-}
-
-/* Für größere Projekte oder besondere Bilder */
 .portfolio-item.large {
-  grid-column: span 2;  /* Diese Projekte nehmen 2 Spalten ein */
+  grid-column: span 2;
 }
 
-/* Für kleine Bildschirme */
+/* Mobile */
 @media (max-width: 768px) {
   .portfolio-grid {
-    grid-template-columns: 1fr;  /* Auf kleinen Bildschirmen wird alles untereinander angezeigt */
+    grid-template-columns: 1fr;
   }
 }
 
+/* ------------------ PORTFOLIO SLIDER ------------------ */
 
-/* Portfolio Slider */
 .portfolio-slider {
   position: relative;
   width: 100%;
-  max-width: 800px;  /* Maximale Breite für den Slider */
-  margin: 0 auto;    /* Zentriert den Slider */
-  overflow: hidden;  /* Verhindert, dass die Bilder außerhalb des Containers angezeigt werden */
+  max-width: 800px;     /* Slider-Breite */
+  margin: 0 auto;       /* zentriert */
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-/* Slider-Bilder */
 .portfolio-slider img {
   width: 100%;
-  height: 400px;    /* Feste Höhe für alle Bilder im Slider */
-  object-fit: cover; /* Passt das Bild gleichmäßig dem Container an */
-  display: block;   /* Verhindert extra Abstand unter den Bildern */
+  height: 400px;        /* Einheitliche Höhe für Slider */
+  object-fit: cover;
+  display: none;        /* JS blendet aktiv das richtige ein */
 }
 
-/* Navigationspfeile */
+/* Navigation-Pfeile */
+
 .slider-nav {
   position: absolute;
   top: 50%;
@@ -140,23 +143,23 @@ body {
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);
-  z-index: 10;  /* Stellt sicher, dass die Pfeile über den Bildern liegen */
+  z-index: 10;
+  padding: 0 10px;
 }
 
 .slider-nav .prev,
 .slider-nav .next {
-  background-color: rgba(0, 0, 0, 0.5);  /* Halbtransparentes Schwarz */
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 10px;
   cursor: pointer;
   border-radius: 50%;
   font-size: 2rem;
   user-select: none;
+  transition: background-color 0.2s;
 }
 
 .slider-nav .prev:hover,
 .slider-nav .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);  /* Intensiviert den Hintergrund bei Hover */
+  background-color: rgba(0, 0, 0, 0.8);
 }
-
-/* Für kleinere*
