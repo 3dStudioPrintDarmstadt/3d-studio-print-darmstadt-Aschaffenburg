@@ -3,195 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Studio Darmstadt – Professioneller 3D Druck & CAD Konstruktion</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: "Inter", sans-serif;
-            background: #f0f2f5;
-            color: #222;
-        }
-
-        /* HERO BANNER */
-        .hero {
-            background: linear-gradient(135deg, #0057d9, #0099ff);
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-        .hero h1 {
-            font-size: 42px;
-            font-weight: 700;
-            margin: 0;
-        }
-        .hero p {
-            font-size: 20px;
-            margin-top: 15px;
-            opacity: 0.9;
-        }
-
-        /* CONTENT SECTIONS */
-        .section {
-            max-width: 1100px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        h2 {
-            font-size: 28px;
-            border-left: 8px solid #007bff;
-            padding-left: 15px;
-            margin-bottom: 25px;
-            font-weight: 700;
-        }
-
-        /* SERVICES GRID */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: 0.25s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-        }
-        .card h3 {
-            margin-top: 0;
-        }
-
-        /* PRICES */
-        ul {
-            background: white;
-            padding: 20px 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            list-style: none;
-            line-height: 1.8;
-        }
-        ul li::before {
-            content: "✓ ";
-            color: #007bff;
-            font-weight: 700;
-        }
-
-        /* CONTACT BOX */
-        .contact-box {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            font-size: 18px;
-        }
-        .contact-box b {
-            color: #0057d9;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #111;
-            color: #ccc;
-            padding: 30px;
-            margin-top: 60px;
-            text-align: center;
-            font-size: 14px;
-        }
-    </style>
+    <title>3D Studio Darmstadt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav>
+            <div class="logo">3D Studio Darmstadt</div>
+            <ul>
+                <li><a href="#start">Start</a></li>
+                <li><a href="#leistungen">Leistungen</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- HERO -->
-    <div class="hero">
-        <h1>3D Studio Darmstadt</h1>
-        <p>Professioneller 3D-Druck & präzise CAD-Konstruktionen für Privat & Gewerbe</p>
-    </div>
-
-    <!-- ABOUT -->
-    <section class="section">
-        <h2>Über uns</h2>
-        <p>
-            Wir bieten hochwertigen 3D-Druck, maßgeschneiderte CAD-Konstruktionen, 
-            Reverse Engineering und die Fertigung individueller Ersatzteile.  
-            Lokal in Darmstadt — schnell, zuverlässig, persönlich.
-        </p>
+    <!-- Hero Section -->
+    <section id="start" class="hero">
+        <div class="hero-text">
+            <h1>Professioneller 3D-Druck & CAD-Service in Darmstadt</h1>
+            <p>Von kleinen Reparaturen bis zu maßgeschneiderten Konstruktionen</p>
+            <a href="#kontakt" class="btn">Jetzt anfragen</a>
+        </div>
+        <img src="images/hero-placeholder.jpg" alt="3D Druck" class="hero-img">
     </section>
 
-    <!-- SERVICES -->
-    <section class="section">
-        <h2>Leistungen</h2>
-        <div class="grid">
-
-            <div class="card">
-                <h3>3D Druck Service</h3>
-                <p>Präzise FDM-Drucke in PLA, PETG, TPU und weiteren Materialien – ideal für funktionale Teile, Prototypen & Reparaturen.</p>
+    <!-- Leistungen -->
+    <section id="leistungen" class="services">
+        <h2>Unsere Leistungen</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="images/service-placeholder.jpg" alt="3D Druck">
+                <h3>3D-Druck</h3>
+                <p>Schneller und präziser Druck für Prototypen und Ersatzteile.</p>
             </div>
-
-            <div class="card">
-                <h3>CAD Konstruktion</h3>
-                <p>Konstruktionen nach Maß: technische Modelle, Nachbauten, Vorrichtungen, Adapter, Halterungen und mehr.</p>
+            <div class="service-item">
+                <img src="images/service-placeholder.jpg" alt="CAD">
+                <h3>CAD-Konstruktionen</h3>
+                <p>Maßgeschneiderte CAD-Modelle nach Ihren Vorgaben.</p>
             </div>
-
-            <div class="card">
+            <div class="service-item">
+                <img src="images/service-placeholder.jpg" alt="Reparaturen">
+                <h3>Reparaturen</h3>
+                <p>Kunststoffteile reparieren oder nachbauen – schnell & zuverlässig.</p>
+            </div>
+            <div class="service-item">
+                <img src="images/service-placeholder.jpg" alt="Reverse Engineering">
                 <h3>Reverse Engineering</h3>
-                <p>Nachbau nicht mehr erhältlicher Teile anhand von Mustern oder Fotos – schnell und zuverlässig.</p>
+                <p>Vorhandene Teile digitalisieren und neu konstruieren.</p>
             </div>
-
-            <div class="card">
-                <h3>Kunststoff Reparaturen</h3>
-                <p>Gehäuse, Clips, Halterungen und Kleinbauteile kostengünstig reparieren oder ersetzen lassen.</p>
-            </div>
-
         </div>
     </section>
 
-    <!-- PRICES -->
-    <section class="section">
-        <h2>Preise</h2>
-        <ul>
-            <li><b>3D Druck:</b> ab 0,25 € pro Gramm</li>
-            <li><b>CAD Konstruktion:</b> 25–45 € / Stunde</li>
-            <li><b>Ersatzteil-Nachbau:</b> ab 15 €</li>
-            <li><b>Prototypen & Sonderteile:</b> individuell</li>
-        </ul>
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <img src="images/portfolio-placeholder1.jpg" alt="Projekt 1">
+            <img src="images/portfolio-placeholder2.jpg" alt="Projekt 2">
+            <img src="images/portfolio-placeholder3.jpg" alt="Projekt 3">
+            <img src="images/portfolio-placeholder4.jpg" alt="Projekt 4">
+            <img src="images/portfolio-placeholder5.jpg" alt="Projekt 5">
+            <img src="images/portfolio-placeholder6.jpg" alt="Projekt 6">
+        </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="section">
+    <!-- Über mich -->
+    <section id="about" class="about">
+        <h2>Über mich</h2>
+        <div class="about-content">
+            <img src="images/about-placeholder.jpg" alt="Studio / Ich">
+            <p>Ich bin Technischer Produktdesigner mit Erfahrung im 3D-Druck, CAD-Konstruktionen und Reverse Engineering. Mit meinem Studio in Darmstadt biete ich schnelle, präzise und maßgeschneiderte Lösungen für lokale Kunden.</p>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="contact">
         <h2>Kontakt</h2>
-        <div class="contact-box">
-            <p>Johannes Keller</p>
-            <p>Noackstraße 48c</p>
-            <p>6464285 Darmstadt</p>
-            <p><b>E-Mail:</b> 3dstudiodarmstadt@gmail.de</p>
-            <p><b>Standort:</b> Darmstadt, Aschaffenburg und Umgebung</p>
-            <p>Antwortzeit: meistens unter 24 Stunden</p>
-        </div>
+        <form action="mailto:d3dstudiodarmstadt@gmail.de" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Dein Name" required>
+            <input type="email" name="email" placeholder="Deine E-Mail" required>
+            <textarea name="message" placeholder="Nachricht" required></textarea>
+            <button type="submit" class="btn">Absenden</button>
+        </form>
     </section>
-    
- <!-- IMPRESSUM -->
-    <section class="section">
-        <h2>Impressum</h2>
-        <div class="contact-box">
-            <p>Johannes Keller</p>
-            <p>Noackstraße 48c</p>
-            <p>6464285 Darmstadt</p>
-            <p><b>E-Mail:</b> 3dstudiodarmstadt@gmail.de</p>
-        </div>
-    </section>
-    <footer>
-        © 2025 3D Studio Darmstadt — Professioneller 3D Druck & CAD Service
-    </footer>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 3D Studio Darmstadt | Made with ❤️</p>
+    </footer>
 </body>
 </html>
