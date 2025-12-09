@@ -6,7 +6,7 @@ const heroVideos = [
 ];
 
 let heroIndex = 0;
-const heroVideo = document.getElementById("heroVideo");
+const heroVideo = document.getElementById("heroVid"); // <- hier ID korrigiert
 
 // Funktion zum Abspielen des aktuellen Videos
 function playCurrentVideo() {
@@ -22,16 +22,22 @@ heroVideo.addEventListener("ended", () => {
     playCurrentVideo();
 });
 
-// Buttonsteuerung
-document.getElementById("heroNext").onclick = () => {
-    heroIndex = (heroIndex + 1) % heroVideos.length;
-    playCurrentVideo();
-};
+// Optional: Buttonsteuerung, falls vorhanden
+const nextBtn = document.getElementById("heroNext");
+const prevBtn = document.getElementById("heroPrev");
 
-document.getElementById("heroPrev").onclick = () => {
-    heroIndex = (heroIndex - 1 + heroVideos.length) % heroVideos.length;
-    playCurrentVideo();
-};
+if(nextBtn) {
+    nextBtn.onclick = () => {
+        heroIndex = (heroIndex + 1) % heroVideos.length;
+        playCurrentVideo();
+    };
+}
+if(prevBtn) {
+    prevBtn.onclick = () => {
+        heroIndex = (heroIndex - 1 + heroVideos.length) % heroVideos.length;
+        playCurrentVideo();
+    };
+}
 
 // Starte das erste Video
 playCurrentVideo();
