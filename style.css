@@ -31,6 +31,12 @@ body {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+@media (max-width: 768px) {
+  .about-images {
+    grid-template-columns: 1fr;  /* Auf kleinen Bildschirmen wird jedes Bild in einer eigenen Zeile angezeigt */
+  }
+}
+
 /* Über uns - Studio Grid */
 .about-images {
   display: grid; /* Wir verwenden Grid, um die Bilder nebeneinander anzuordnen */
