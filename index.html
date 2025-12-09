@@ -10,14 +10,14 @@
 
 <!-- ================= HERO ================= -->
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline id="heroVid"></video>
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata"></video>
   <div class="hero-content">
     <h1>Präziser 3D-Druck aus Darmstadt</h1>
     <p>Prototyping • Ersatzteile • CAD-Konstruktion</p>
     <a href="#contact" class="btn">Jetzt Angebot anfragen</a>
     <div class="hero-controls">
-      <button id="heroPrev" class="btn">←</button>
-      <button id="heroNext" class="btn">→</button>
+      <button class="hero-btn" data-direction="prev" aria-label="Vorheriges Video">←</button>
+      <button class="hero-btn" data-direction="next" aria-label="Nächstes Video">→</button>
     </div>
   </div>
 </section>
@@ -38,7 +38,7 @@
 
 <!-- ================= ÜBER UNS ================= -->
 <section id="about" class="section">
-  <div class="container" style="max-width: 900px; margin: auto;">
+  <div class="container">
     <h2 class="section-title">Über uns</h2>
     <p>Wir sind ein lokales 3D-Studio mit Fokus auf 3D-Druck, CAD-Konstruktion und Ersatzteilfertigung. 
        Mit modernster Technologie und präziser Handarbeit bringen wir Ihre Ideen in die Realität.</p>
@@ -51,10 +51,10 @@
 </section>
 
 <!-- ================= LEISTUNGEN ================= -->
-<section id="leistungen" class="section" style="background: #f7f7f7;">
-  <div class="container" style="max-width: 800px; margin: auto;">
+<section id="leistungen" class="section bg-light">
+  <div class="container">
     <h2 class="section-title">Leistungen</h2>
-    <ul style="list-style-type: disc; padding-left: 1.5rem; line-height: 1.8;">
+    <ul class="leistungs-list">
       <li>3D-Druck (FDM – PLA, PETG, TPU)</li>
       <li>CAD-Konstruktion & Reverse Engineering</li>
       <li>Ersatzteile und funktionale Bauteile</li>
@@ -68,34 +68,52 @@
   <div class="container">
     <h2 class="section-title">Portfolio</h2>
     <div class="portfolio-grid">
-      <div class="portfolio-item"><img src="assets/img/portfolio/projekt1.jpg" alt="Projekt 1"></div>
-      <div class="portfolio-item"><img src="assets/img/portfolio/projekt2.jpg" alt="Projekt 2"></div>
-      <div class="portfolio-item"><img src="assets/img/portfolio/projekt3.jpg" alt="Projekt 3"></div>
-      <div class="portfolio-item"><img src="assets/img/portfolio/projekt4.jpg" alt="Projekt 4"></div>
-      <div class="portfolio-item"><img src="assets/img/portfolio/projekt5.jpg" alt="Projekt 5"></div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/projekt1.jpg" alt="Projekt 1">
+        <div class="portfolio-overlay">Projekt 1</div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/projekt2.jpg" alt="Projekt 2">
+        <div class="portfolio-overlay">Projekt 2</div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/projekt3.jpg" alt="Projekt 3">
+        <div class="portfolio-overlay">Projekt 3</div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/projekt4.jpg" alt="Projekt 4">
+        <div class="portfolio-overlay">Projekt 4</div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/img/portfolio/projekt5.jpg" alt="Projekt 5">
+        <div class="portfolio-overlay">Projekt 5</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ================= KONTAKT ================= -->
 <section id="contact" class="section contact-section">
-  <div class="container" style="max-width: 600px; margin: auto; text-align: left;">
+  <div class="container">
     <h2 class="section-title">Kontakt</h2>
     <form>
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin-bottom: 1rem;"><br>
-      <label for="email">E-Mail:</label><br>
-      <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 1rem;"><br>
-      <label for="message">Nachricht:</label><br>
-      <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px; margin-bottom: 1rem;"></textarea><br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">E-Mail:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Nachricht:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      
       <button type="submit" class="btn">Absenden</button>
     </form>
   </div>
 </section>
 
 <!-- ================= IMPRESSUM ================= -->
-<section id="impressum" class="section impressum-section" style="background: #f7f7f7;">
-  <div class="container" style="max-width: 700px; margin: auto;">
+<section id="impressum" class="section impressum-section bg-light">
+  <div class="container">
     <h2 class="section-title">Impressum</h2>
     <p>3D Studio Darmstadt<br>
        Noackstraße 48<br>
@@ -108,7 +126,7 @@
   </div>
 </section>
 
-<!-- HeroSlider.js am Ende einbinden -->
 <script src="assets/js/heroSlider.js"></script>
+<script src="assets/js/imageSlider.js"></script>
 </body>
 </html>
