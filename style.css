@@ -6,15 +6,23 @@ body {
   padding: 0;
 }
 
-/* Beispiel: Hero-Sektion */
+/* Hero-Sektion */
 .hero-video {
-  position: absolute; top: 0; left: 0;
-  width: 100%; height: 100%; object-fit: cover; opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
 }
 
 .hero-content {
-  position: relative; z-index: 2; text-align: center;
-  color: white; padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 0 2rem;
   animation: fadeIn 1.5s ease-out;
 }
 
@@ -23,25 +31,60 @@ body {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Portfolio Hover */
+/* Portfolio-Gitter */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Automatisch skalierende Spalten */
+  gap: 1.5rem;  /* Abstand zwischen den Portfolio-Items */
+  margin: 2rem 0; /* Abstand nach oben und unten */
 }
 
 .portfolio-item {
-  position: relative; overflow: hidden;
-  border-radius: 10px; cursor: pointer;
-  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* leichter Schatten für mehr Tiefe */
 }
 
-.portfolio-item:hover { transform: scale(1.05); }
+.portfolio-item:hover {
+  transform: scale(1.05);  /* Vergrößern bei Hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);  /* Intensivierter Schatten beim Hover */
+}
 
 .portfolio-item .overlay {
-  position: absolute; bottom: 0; left: 0; width: 100%;
-  background: rgba(0,0,0,0.6); color: white;
-  padding: 1rem; opacity: 0; transition: 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.portfolio-item:hover .overlay { opacity: 1; }
+.portfolio-item:hover .overlay {
+  opacity: 1;  /* Overlay wird beim Hover sichtbar */
+}
+
+/* Für die Bilder und Videos im Portfolio */
+.portfolio-item img,
+.portfolio-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;  /* Bilder/Videos füllen den Container gleichmäßig */
+}
+
+/* Für größere Projekte oder besondere Bilder */
+.portfolio-item.large {
+  grid-column: span 2;  /* Diese Projekte nehmen 2 Spalten ein */
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Auf kleinen Bildschirmen wird alles untereinander angezeigt */
+  }
+}
