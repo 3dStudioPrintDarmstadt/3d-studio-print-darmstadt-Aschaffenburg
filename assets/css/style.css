@@ -2,7 +2,7 @@
 :root {
   --primary: #00aeef;
   --primary-dark: #0078a8;
-  --secondary: #ff6f61; /* optional für Akzente */
+  --secondary: #ff6f61;
   --dark: #1a1a1a;
   --light: #f5f5f5;
   --text: #222;
@@ -27,12 +27,9 @@ body {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  font-weight: 800;
-  color: var(--primary-dark);
+  font-weight: 700;
+  color: var(--dark);
   font-family: var(--heading-font);
-  border-bottom: 3px solid var(--primary);
-  display: inline-block;
-  padding-bottom: 0.3rem;
 }
 
 .container {
@@ -41,8 +38,7 @@ body {
   padding: 0 1rem;
 }
 
-/* Abwechselnde Sektionen farblich unterscheiden */
-.section:nth-child(even) {
+.bg-light {
   background: #f7f7f7;
 }
 
@@ -73,15 +69,12 @@ body {
 .nav-links a {
   text-decoration: none;
   color: var(--dark);
-  font-weight: 700;
-  padding: 0.2rem 0.5rem;
-  border-radius: 5px;
+  font-weight: 600;
   transition: 0.25s;
 }
 
 .nav-links a:hover {
-  background: var(--primary);
-  color: white;
+  color: var(--primary);
 }
 
 /* ------------------ HERO ------------------ */
@@ -107,7 +100,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.55); /* stärkerer Overlay für bessere Lesbarkeit */
+  background: rgba(0,0,0,0.45);
   z-index: 1;
 }
 
@@ -118,35 +111,37 @@ body {
   text-align: center;
   padding: 2rem;
   max-width: 800px;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
 
 .hero-content h1 {
   font-size: 3rem;
-  font-weight: 800;
   margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  color: #f0f0f0;
 }
 
-/* Hero-Button */
-.btn {
+.hero-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-btn {
   background: var(--primary);
   color: white;
   font-weight: 700;
-  padding: 14px 28px;
+  padding: 10px 18px;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
-.btn:hover {
+.hero-btn:hover {
   background: var(--primary-dark);
   transform: translateY(-2px);
 }
@@ -164,12 +159,11 @@ body {
   height: 260px;
   object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .about-images img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
 /* ------------------ PORTFOLIO GRID ------------------ */
@@ -177,6 +171,11 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.5rem;
+  position: relative;
+}
+
+.portfolio-item {
+  position: relative;
 }
 
 .portfolio-item img {
@@ -187,20 +186,31 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio-item img:hover {
+.portfolio-item:hover img {
   transform: scale(1.03);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* ------------------ CONTACT ------------------ */
-.contact-section {
-  background: #f5f5f5;
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   text-align: center;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 12px 12px;
 }
 
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* ------------------ FORM ------------------ */
 .contact-section form {
   margin-top: 2rem;
-  text-align: left;
 }
 
 .contact-section input,
@@ -215,37 +225,6 @@ body {
 
 .contact-section button {
   width: auto;
-  background: var(--primary);
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.contact-section button:hover {
-  background: var(--primary-dark);
-}
-
-/* ------------------ IMPRESSUM ------------------ */
-.impressum-section {
-  background: #f7f7f7;
-  padding: 4rem 1.5rem;
-  line-height: 1.6;
-}
-
-/* ------------------ TEXTFORMATIERUNG ------------------ */
-p {
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-  color: #333;
-}
-
-ul {
-  margin: 1rem 0;
-  padding-left: 1.5rem;
-  line-height: 1.8;
 }
 
 /* ------------------ RESPONSIVE ------------------ */
