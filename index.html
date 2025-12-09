@@ -94,9 +94,11 @@
 
 <!-- ================= KONTAKT ================= -->
 <section id="contact" class="section contact-section">
-  <div class="container">
+  <div class="container" style="max-width: 600px; margin: auto;">
     <h2 class="section-title">Kontakt</h2>
-    <form>
+    
+    <!-- Formular -->
+    <form id="contactForm" action="https://formspree.io/f/xyzrdlap" method="POST">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
       
@@ -108,8 +110,44 @@
       
       <button type="submit" class="btn">Absenden</button>
     </form>
+
+    <!-- Bestätigungsnachricht -->
+    <p id="formMessage" style="color:green; display:none; margin-top:1rem;">
+      Danke! Deine Nachricht wurde gesendet.
+    </p>
   </div>
 </section>
+
+<script>
+const form = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); // verhindert Standard-Submit
+  const data = new FormData(form);
+
+  fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      formMessage.style.display = "block"; // zeigt Erfolgsmeldung
+      form.reset(); // Formular zurücksetzen
+    } else {
+      alert("Ups! Etwas ist schiefgelaufen. Bitte versuche es später erneut.");
+    }
+  })
+  .catch(() => {
+    alert("Ups! Etwas ist schiefgelaufen. Bitte versuche es später erneut.");
+  });
+});
+</script>
+
+  
 
 <!-- ================= IMPRESSUM ================= -->
 <section id="impressum" class="section impressum-section bg-light">
