@@ -130,3 +130,39 @@ body {
 .slider-nav .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+/* Portfolio-Gitter */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 3-4 Bilder pro Zeile */
+  gap: 1.5rem;  /* Abstand zwischen den Bildern */
+  margin: 2rem 0; /* Abstand nach oben und unten */
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* leichter Schatten für mehr Tiefe */
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);  /* Vergrößern bei Hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Intensivierter Schatten beim Hover */
+}
+
+.portfolio-item img,
+.portfolio-item video {
+  width: 100%;   /* 100% der Breite des Containers */
+  height: auto;  /* Höhe automatisch anpassen */
+  object-fit: cover; /* Bilder passen sich gleichmäßig dem Container an */
+  border-radius: 10px;  /* Abgerundete Ecken für die Bilder */
+}
+
+/* Für kleinere Bildschirme */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;  /* Auf kleinen Bildschirmen wird alles untereinander angezeigt */
+  }
+}
