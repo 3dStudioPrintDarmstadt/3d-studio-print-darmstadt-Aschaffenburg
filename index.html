@@ -1,38 +1,35 @@
-<!-- Hero mit Video -->
-<header>
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="hero.mp4" type="video/mp4">
-  </video>
-  <div class="hero-content">
-    <h1>3D-Druck & CAD-Service in Darmstadt & Aschaffenburg</h1>
-    <p>Präzise, individuell, lebendig – wir bringen Ihre Ideen in 3D zum Leben.</p>
-    <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Jetzt Angebot anfragen</button>
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Studio Darmstadt & Aschaffenburg</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-<!-- Portfolio mit Hover & optionalen Videos -->
-<section id="portfolio">
-  <h2 class="section-title">Portfolio</h2>
-  <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <img src="projekt1.jpg" alt="Projekt 1">
-      <div class="overlay">
-        <p>3D-Druck Prototyp</p>
-      </div>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">
+      <img src="logo.svg" alt="3D Studio Darmstadt & Aschaffenburg" height="50">
     </div>
-    <div class="portfolio-item">
-      <video controls>
-        <source src="projekt2.mp4" type="video/mp4">
-      </video>
-      <div class="overlay">
-        <p>CAD-Modell Animation</p>
-      </div>
+    <ul>
+      <li><a href="#about">Über uns</a></li>
+      <li><a href="#services">Leistungen</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+      <li><a href="#impressum">Impressum</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header>
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>3D-Druck & CAD-Service in Darmstadt & Aschaffenburg</h1>
+      <p>Präzise, individuell, lebendig – wir bringen Ihre Ideen in 3D zum Leben.</p>
+      <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Jetzt Angebot anfragen</button>
     </div>
-    <div class="portfolio-item">
-      <img src="projekt3.jpg" alt="Projekt 3">
-      <div class="overlay">
-        <p>Ersatzteil Reparatur</p>
-      </div>
-    </div>
-  </div>
-</section>
