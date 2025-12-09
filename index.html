@@ -5,41 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3D Studio Print & Design Darmstadt / Aschaffenburg</title>
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <!-- Navigation -->
-<nav>
-  <div class="logo">
-    <img src="logo.svg" alt="3D Studio Logo" height="50">
+<nav class="navbar">
+  <div class="nav-container">
+    <img src="assets/img/logo.svg" alt="3D Studio Logo" class="logo">
+
+    <ul class="nav-links">
+      <li><a href="#about">Über uns</a></li>
+      <li><a href="#services">Leistungen</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+      <li><a href="#impressum">Impressum</a></li>
+    </ul>
   </div>
-  <ul>
-    <li><a href="#about">Über uns</a></li>
-    <li><a href="#services">Leistungen</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#contact">Kontakt</a></li>
-    <li><a href="#impressum">Impressum</a></li>
-  </ul>
 </nav>
 
 
-<!-- Hero-Bereich -->
-<header>
+<!-- Hero -->
+<header class="hero">
   <video autoplay muted loop playsinline class="hero-video">
-    <source src="hero.mp4" type="video/mp4">
+    <source src="assets/img/hero/hero1.mp4" type="video/mp4">
   </video>
 
   <div class="hero-content">
     <h1>Ihr 3D-Druck & CAD-Service in Darmstadt & Aschaffenburg</h1>
     <p>Präzise, individuell, effizient – wir bringen Ihre Ideen professionell in 3D zum Leben.</p>
 
-    <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+    <button class="btn"
+      onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       Jetzt Angebot anfragen
     </button>
   </div>
@@ -47,13 +49,77 @@
 
 
 <!-- Über uns -->
-<section id="about">
+<section id="about" class="section">
   <h2 class="section-title">Über uns</h2>
 
-  <div class="about-container">
-    <div class="text">
+  <div class="container about-container">
+
+    <div class="about-text">
       <p>
-        Wir sind ein lokales 3D-Studio mit Schwerpunkt auf 3D-Druck, CAD-Konstruktion sowie Ersatzteilfertigung.
-        Mit Erfahrung als Technischer Produktdesigner setzen wir Ihre Projekte präzise und zuverlässig um.
+        Wir sind ein lokales 3D-Studio mit Schwerpunkt auf 3D-Druck, CAD-Konstruktion und Ersatzteilfertigung.
+        Als Technischer Produktdesigner bringen wir Ihre Ideen präzise in Form.
       </p>
     </div>
+
+    <!-- Studio Grid -->
+    <div class="about-images">
+      <img src="assets/img/studio/studio_1.jpg" alt="">
+      <img src="assets/img/studio/studio_2.jpg" alt="">
+      <img src="assets/img/studio/studio_3.jpg" alt="">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Portfolio -->
+<section id="portfolio" class="section">
+  <h2 class="section-title">Portfolio</h2>
+
+  <div class="container portfolio-grid">
+
+    <div class="portfolio-item">
+      <img src="assets/img/portfolio/projekt1.webp" alt="">
+    </div>
+
+    <div class="portfolio-item">
+      <img src="assets/img/portfolio/projekt2.webp" alt="">
+    </div>
+
+    <div class="portfolio-item">
+      <img src="assets/img/portfolio/projekt3.webp" alt="">
+    </div>
+
+    <div class="portfolio-item">
+      <img src="assets/img/portfolio/projekt4.webp" alt="">
+    </div>
+
+    <div class="portfolio-item">
+      <img src="assets/img/portfolio/projekt5.webp" alt="">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Portfolio-Slider für Hero-Alternativen -->
+<section class="section">
+  <h2 class="section-title">Hero-Slider Vorschau</h2>
+
+  <div class="portfolio-slider">
+    <img src="assets/img/portfolio/projekt1.webp">
+    <img src="assets/img/portfolio/projekt2.webp">
+    <img src="assets/img/portfolio/projekt3.webp">
+
+    <div class="slider-nav">
+      <span class="prev">&#10094;</span>
+      <span class="next">&#10095;</span>
+    </div>
+  </div>
+</section>
+
+
+<script src="assets/js/slider.js"></script>
+
+</body>
+</html>
