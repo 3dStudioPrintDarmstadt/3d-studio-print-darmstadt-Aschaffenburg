@@ -29,7 +29,8 @@
     <ul class="nav-links">
       <li><a href="#about">Über uns</a></li>
       <li><a href="#leistungen">Leistungen</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#portfolio3d">Portfolio 3D</a></li>
+      <li><a href="#portfolioBilder">Portfolio Bilder</a></li>
       <li><a href="#contact">Kontakt</a></li>
       <li><a href="#impressum">Impressum</a></li>
     </ul>
@@ -63,12 +64,13 @@
   </div>
 </section>
 <!-- ================= PORTFOLIO 3D ================= -->
-<section id="portfolio" class="section">
+<section id="portfolio3d" class="section">
   <div class="container">
     <h2 class="section-title">Unsere 3D Modelle</h2>
     <p>Beispiele aus unseren realisierten Projekten – interaktiv und direkt im Browser.</p>
 
     <div class="portfolio-grid">
+
       <!-- Modell 1 -->
       <div class="portfolio-item">
         <model-viewer src="assets/models/modell1.glb"
@@ -143,19 +145,19 @@
           <p>Material: ABS<br>Technologie: FDM<br>Größe: 130x90x60 mm</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- model-viewer Script -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-<!-- ================= PORTFOLIO ================= -->
-<section id="portfolio" class="section">
+<!-- ================= PORTFOLIO BILDER ================= -->
+<section id="portfolioBilder" class="section">
   <div class="container">
     <h2 class="section-title">Unsere Projekte</h2>
     <p>Ein Auszug aus unseren realisierten Projekten – von funktionalen Bauteilen bis zu kreativen Prototypen.</p>
+
     <div class="portfolio-grid">
+
       <div class="portfolio-item">
         <img src="assets/img/portfolio/projekt1.jpg" alt="Projekt 1">
         <div class="portfolio-overlay">
@@ -163,6 +165,7 @@
           <p>Material: PLA<br>Technologie: FDM<br>Größe: 120x80x50 mm</p>
         </div>
       </div>
+
       <div class="portfolio-item">
         <img src="assets/img/portfolio/projekt2.jpg" alt="Projekt 2">
         <div class="portfolio-overlay">
@@ -170,6 +173,7 @@
           <p>Material: PETG<br>Technologie: SLA<br>Größe: 100x70x60 mm</p>
         </div>
       </div>
+
       <div class="portfolio-item">
         <img src="assets/img/portfolio/projekt3.jpg" alt="Projekt 3">
         <div class="portfolio-overlay">
@@ -177,6 +181,7 @@
           <p>Material: TPU<br>Technologie: FDM<br>Größe: 90x50x40 mm</p>
         </div>
       </div>
+
       <div class="portfolio-item">
         <img src="assets/img/portfolio/projekt4.jpg" alt="Projekt 4">
         <div class="portfolio-overlay">
@@ -184,6 +189,7 @@
           <p>Material: PLA<br>Technologie: FDM<br>Größe: 150x100x70 mm</p>
         </div>
       </div>
+
       <div class="portfolio-item">
         <img src="assets/img/portfolio/projekt5.jpg" alt="Projekt 5">
         <div class="portfolio-overlay">
@@ -191,49 +197,10 @@
           <p>Material: ABS<br>Technologie: SLA<br>Größe: 130x90x60 mm</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
-
-
-
-<!-- ================= KONTAKT ================= -->
-<section id="contact" class="section contact-section">
-  <div class="container">
-    <h2 class="section-title">Kontaktieren Sie uns</h2>
-    <p>Haben Sie ein Projekt oder eine Frage? Schreiben Sie uns – wir melden uns schnellstmöglich.</p>
-    <form id="contactForm" action="https://formspree.io/f/xyzrdlap" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Ihr Name" required>
-
-      <label for="email">E-Mail:</label>
-      <input type="email" id="email" name="email" placeholder="Ihre E-Mail" required>
-
-      <label for="subject">Betreff:</label>
-      <input type="text" id="subject" name="subject" placeholder="Thema Ihrer Anfrage" required>
-
-      <label for="message">Nachricht:</label>
-      <textarea id="message" name="message" rows="6" placeholder="Ihre Nachricht" required></textarea>
-
-      <button type="submit" class="btn">Absenden</button>
-    </form>
-
-    <!-- Bestätigungsmeldung -->
-    <div id="formSuccess" style="display:none; margin-top: 1.5rem; padding: 1rem; background: #d4edda; color: #155724; border-radius: 8px; opacity: 0; transition: opacity 0.5s;">
-      <div style="text-align:center; margin-bottom:0.5rem;">
-        <img src="assets/img/logo.png" alt="3D Studio Darmstadt Logo" style="height:50px;">
-      </div>
-      <p>Sehr geehrte/r <span id="successName"></span>,</p>
-      <p>vielen Dank für Ihre Kontaktanfrage. Wir werden uns schnellstmöglich um Ihr Anliegen kümmern.</p>
-      <p>Ihre Anfrage zum Thema <strong><span id="successSubject"></span></strong> haben wir am <span id="successDate"></span> erhalten.</p>
-      <p>Ihre Nachricht:</p>
-      <blockquote style="margin:0; padding:0.5rem 1rem; background:#f8f9fa; border-left:4px solid #00aeef; border-radius:4px;"><span id="successMessage"></span></blockquote>
-      <p>Mit freundlichen Grüßen,<br>Ihr 3D Studio Darmstadt Team</p>
-      <p style="font-size:0.8rem; color:#555;">Diese Nachricht dient nur zu Informationszwecken. Bitte antworten Sie nicht auf diese automatische Bestätigung.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ================= IMPRESSUM ================= -->
 <section id="impressum" class="section impressum-section bg-light">
   <div class="container">
