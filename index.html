@@ -151,56 +151,13 @@
   </div>
 </section>
 
-
-
 <!-- ================= PORTFOLIO BILDER ================= -->
 <section id="portfolioBilder" class="section">
   <div class="container">
     <h2 class="section-title">Unsere Projekte</h2>
     <p>Ein Auszug aus unseren realisierten Projekten – von funktionalen Bauteilen bis zu kreativen Prototypen.</p>
-
     <div class="portfolio-grid">
-
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/projekt1.jpg" alt="Projekt 1">
-        <div class="portfolio-overlay">
-          <h3>Projekt 1</h3>
-          <p>Material: PLA<br>Technologie: FDM<br>Größe: 120x80x50 mm</p>
-        </div>
-      </div>
-
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/projekt2.jpg" alt="Projekt 2">
-        <div class="portfolio-overlay">
-          <h3>Projekt 2</h3>
-          <p>Material: PETG<br>Technologie: SLA<br>Größe: 100x70x60 mm</p>
-        </div>
-      </div>
-
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/projekt3.jpg" alt="Projekt 3">
-        <div class="portfolio-overlay">
-          <h3>Projekt 3</h3>
-          <p>Material: TPU<br>Technologie: FDM<br>Größe: 90x50x40 mm</p>
-        </div>
-      </div>
-
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/projekt4.jpg" alt="Projekt 4">
-        <div class="portfolio-overlay">
-          <h3>Projekt 4</h3>
-          <p>Material: PLA<br>Technologie: FDM<br>Größe: 150x100x70 mm</p>
-        </div>
-      </div>
-
-      <div class="portfolio-item">
-        <img src="assets/img/portfolio/projekt5.jpg" alt="Projekt 5">
-        <div class="portfolio-overlay">
-          <h3>Projekt 5</h3>
-          <p>Material: ABS<br>Technologie: SLA<br>Größe: 130x90x60 mm</p>
-        </div>
-      </div>
-
+      <!-- Portfolio-Bilder hier -->
     </div>
   </div>
 </section>
@@ -224,7 +181,7 @@
     </div>
   </div>
 </section>
- 
+
 <!-- ================= IMPRESSUM ================= -->
 <section id="impressum" class="section impressum-section bg-light">
   <div class="container">
@@ -240,11 +197,12 @@
   </div>
 </section>
 
+<!-- ================= SCRIPTS ================= -->
 <script src="assets/js/heroSlider.js"></script>
 <script src="assets/js/imageSlider.js"></script>
 
+<!-- ================= KONTAKT-FORMULAR SCRIPT ================= -->
 <script>
-// ================= Kontaktformular =================
 document.getElementById('contactForm').addEventListener('submit', function(e){
     e.preventDefault();
     const form = e.target;
@@ -260,7 +218,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
     }).then(response => {
         if(response.ok){
             form.reset();
-            // Inhalte in Bestätigung einfügen
             document.getElementById('successName').textContent = name;
             document.getElementById('successSubject').textContent = subject;
             document.getElementById('successMessage').textContent = message;
@@ -278,6 +235,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
     });
 });
 </script>
+
 <script src="assets/js/contactForm.js"></script>
 <script src="assets/js/portfolioAnim.js"></script>
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
